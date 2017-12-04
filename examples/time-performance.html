@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <script>
+        function wait(time) {
+            return new Promise((resolve) => {
+                setTimeout(resolve, time);
+            });
+        }
+
+        async function start() {
+            performance.mark('start');
+
+            await wait(500);
+
+            performance.mark('long wait');
+
+            await wait(1000);
+
+            performance.mark('short wait');
+            await wait(100);
+
+            performance.mark('end');
+        }
+
+        start().then(() => {
+            performance.measure('Global', 'start', 'end');
+            performance.measure('Inner', 'long wait', 'short wait');
+        });
+        </script>
+    </body>
+</html>

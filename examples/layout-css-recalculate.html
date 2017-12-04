@@ -1,0 +1,41 @@
+
+<html>
+        <head>
+        <style> 
+
+        </style>
+        </head>
+        <body>
+            <p class="text">hola</p>
+            <button class="action">action</button>
+            <button class="action2">action2</button>
+            <script>
+                document.querySelector('.action').addEventListener('click', () => {
+                    document.querySelector('.text').innerHTML = 'hola hola hola';
+                });
+
+                document.querySelector('.action2').addEventListener('click', () => {
+                    var paso0 = 'uno';
+                    uno();
+                });
+
+                function uno() {
+                    var paso1 = 'dos';
+                    dos();
+                }
+
+                function dos() {
+                    var paso2 = 'tres';
+                    tres();
+                }
+
+                function tres() {
+                    document.querySelector('.text').innerHTML = 'hola hola hola222';
+                }
+            /* 
+               Buscar en main Layout (morado) y First Layout Invalidation 
+            */
+            </script>
+        </body>
+        </html>
+        
