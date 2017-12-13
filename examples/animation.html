@@ -1,0 +1,70 @@
+<html>
+    <body>
+        <style>
+@keyframes ex1 {
+  from {
+    background: red;
+  }
+
+  to {
+    background: blue;
+  }
+}
+
+            .cube {
+                margin-top: 30vh;
+                border: 2px solid black;
+                width: 100px;
+                height: 100px;
+                transition: width 2s, height 2s, border-color 2s;
+                display: inline-block;
+            }    
+
+            .cube.animate {
+                width: 300px;
+                height: 300px;
+                border-color: blue;
+                transition: width 2s, height 2s, border-color 2s;
+            }
+
+            .cube2 {
+                margin-top: 30vh;
+                margin-left: 300px;
+                border: 2px solid black;
+                width: 100px;
+                height: 100px;
+                display: inline-block;
+            }    
+
+            .cube2.animate {
+                animation: ex1 5s infinite linear;
+            }
+
+        </style>
+        <div class="cube"></div>
+        <div class="cube2"></div>
+
+        <script>
+            const cube = document.querySelector('.cube');
+            const cube2 = document.querySelector('.cube2');
+            
+            cube.addEventListener('click', () => {
+                if (cube.classList.contains('animate')) {
+                    cube.classList.remove('animate');
+                } else {
+                    cube.classList.add('animate');
+                }
+            });
+
+
+            cube2.addEventListener('click', () => {
+                if (cube2.classList.contains('animate')) {
+                    cube2.classList.remove('animate');
+                } else {
+                    cube2.classList.add('animate');
+                }
+            });
+
+        </script>
+    </body>
+</html>
