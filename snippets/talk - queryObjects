@@ -1,0 +1,12 @@
+copy(`
+queryObjects(HTMLElement);
+
+function Foo() {}
+
+var littlefoo1 = new Foo();
+littlefoo1.name = 'foo1';
+var littlefoo2 = new Foo();
+littlefoo2.name = 'foo2';
+
+queryObjects(Foo);
+`);

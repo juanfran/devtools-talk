@@ -1,0 +1,2 @@
+copy(`var listener = getEventListeners($0); // selecionamos el ul que es el que tienes los eventos
+    debug(listener.click[0].listener);`);

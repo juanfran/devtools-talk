@@ -7,7 +7,7 @@ ctrl + shift + p / !
 - talk - style console
 - talk - console.time
 
------------------ miscelanea
+----------------- Miscelánea
 
 - activar experiments
 
@@ -20,7 +20,7 @@ customize & control / settings / experiments
 ctrl + shif + p (capture screenshot o node screenshot)
 ctrl + shift + c (inspect element mode) y luego control para hacer la captura
 
--  alt + click expande todos los nodos de elements
+- alt + click expande todos los nodos de elements
 
 - búsqueda
 
@@ -33,6 +33,8 @@ elements / control + f = busqueda .toggle
 - color picker, en un element con color pinchamos en el color.
 
 - transition, ease preview, pinchado el iconico. (animation.html)
+
+- box-shadow editor, input new-todo (vanillajs)
 
 - en console escribir funcion
     pulsar alt mientras seleccionas para seleccionar en columana
@@ -48,7 +50,6 @@ monitorEvents(window, 'click'); // creo que util para recordar la forma de un ob
 
 copy({hola: 2})
 
-
 - queryObjects
 
 queryObjects(HTMLElement);
@@ -63,7 +64,7 @@ littlefoo2.name = 'foo2';
 queryObjects(Foo);
 
 
----------- network
+---------- Network
 - filtros
 
 `is:from-cache`
@@ -80,38 +81,22 @@ queryObjects(Foo);
 - search, puedes buscar en tooodo el proyecto
 - animations (animation.html)
 - accesibility inspector (experimental)
-
-
+- layers (layers.html)
+- rendering, flashing (painting-flashing.html)
+- rendering, fps metter
+- sensors
+- coverage 
+- quick source / si inspeccionas css te sale abajo el archivo con la linea
 
 ---------- Performance
 
-5. slow cpu. Performance / Rueda / CPU
+- slow cpu. Performance / Settings / CPU
+- tiempo de decode de una imagen
 
-2. tiempo de decode de una imagen
+record the page load / pestaña raster / buscar img
 
-performance / Raster, si la imagen es visible podemos ver cual es.
-
-4. medir rendimiento
-
-`js
-performance.mark('start');
-
-var total = 0;
-for (var i = 0; i < 10000000; i++) {
-    total++;
-}
-
-performance.mark('end');
-
-
-performance.measure('Global', 'start', 'end');
-`
-
-3. ver todo los descargado 
-
-`performance.getEntriesByType('resource') // measure, paint...` 
-
-6. observando el rendimiento
+- medir rendimiento / User timing, ver código (time-performance.html)
+- talk - performance-observer / observando el rendimiento (images.html)
 
 `js
 function perf_observer(list, observer) { 
@@ -131,67 +116,50 @@ setTimeout(() => {
     performance.mark('end');
     performance.measure('Global', 'start', 'end');
 }, 2000);
+
+await fetch('https://jsonplaceholder.typicode.com')
 `
 
+- talk - performance-getenties, ver todo los descargado (images.html)
 
+`performance.getEntriesByType('resource') // measure, paint...` 
 
+---------- Debug
 
+- break (vanillajs) 
 
-7. layers, customize devtools / more tools / layers, layers.html
+en el ul subtree modification
 
-8. painting flashing, customize devtools / more tools / painting flashing, painting-flashing.html
+> ver callstack
+> ver variables locales
+> ponemos un break point varias lineas antes y volvemos a borrar
+  ahora vemos que podemos poner abajo un continue to here
+> en el callstack botón derecho restart frame
 
-9. invalidar layout / layout-css-recalculate.html
+- ponemos un break point, boton derecho edit break point, ponemos una coindicion de ejecución
 
-10. break on, botón derecho nodo / call stack (cada función que sucedido antes de la función en la que estas) -> delete item en todo list
-right click, continue to here
-can use the console when is debugging, maybe change something?
-call stack, boton derecho - restart this frame, esto hace que vuelva al principio de la función
+- seleccionamos la x de borrar y vamos a la pestaña "event listener"
+  selecionas el elemento, handler, show function definition
+
+- talk - getevents
+
+var listener = getEventListeners($0); // selecionamos el ul que es el que tienes los eventos
+    debug(listener.click[0].listener);
+
+- black box sirve por ejemplo si estas debuggeando y quieres saltarte el fichero del framework de turno pues solo tienes que añadirlo.
+
+- http://cabbi.bo/ performance grabamos, vamos al source js/global.js y vemos los ms
 
 
 
 12. node --inspect entry.js // chrome://inspect
 --inspect-brk 119
 
-13. time y timeEnd (con el anterior una funciona que se ejecuta n veces y hay que cambiar un paremetro para que vaya más rapida y lo hacemos live)
-
-
+time y timeEnd (con el anterior una funciona que se ejecuta n veces y hay que cambiar un paremetro para que vaya más rapida y lo hacemos live)
 
 15. dom complejo, un css que afecta a muchos nodos, elements affected, box-shadow¿?¿¿, box-sizing??¿
 
-
-23. seleccionas un elemento del dom, en el panel derecho "event listener", selecionas el elemento, handler, show function definition
-
-
-
-27. var listener = getEventListeners(node); debug(listeners.click[0].listener)
-
-
-29. ponemos un break point, boton derecho edit break point, ponemos una coindicion de ejecución
-
 33. localhost remote 80
-
-
-
-37. en un js si tiene un for largo, si nos vamos a performance y medimos paramos y vamos al fichero vemos el tiempo 99.
-
-http://cabbi.bo/ permance grabamos, vamos al source js/global.js y vemos los ms
-
-39. more tools / quick source / si inspeccionas css te sale abajo el archivo
-
-40. more tools / sensors
-
-41. si estamos editando html en elements, shift + tab autoindenta
-
-42. box-shadow editor
-
-43. coverage 
-
-44. en source, ponemos poner un trozo de código en black box para que no se ejecute
-
-46. fps metter en rendering
-
-
 
 
 ??
