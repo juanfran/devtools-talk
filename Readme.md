@@ -134,6 +134,8 @@ await fetch('https://jsonplaceholder.typicode.com')
 
 `performance.getEntriesByType('resource') // measure, paint...` 
 
+- http://cabbi.bo/ performance grabamos, vamos al source js/global.js y vemos los ms
+
 ---------- Debug
 
 - break (vanillajs) 
@@ -157,8 +159,6 @@ var listener = getEventListeners($0); // selecionamos el ul que es el que tienes
     debug(listener.click[0].listener);
 
 - black box sirve por ejemplo si estas debuggeando y quieres saltarte el fichero del framework de turno pues solo tienes que añadirlo.
-
-- http://cabbi.bo/ performance grabamos, vamos al source js/global.js y vemos los ms
 
 ---------- Node
 
