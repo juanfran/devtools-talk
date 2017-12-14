@@ -1,0 +1,1 @@
+console.log('%cHola', 'font-size: 30px; color: red;');
