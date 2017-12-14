@@ -169,3 +169,9 @@ var listener = getEventListeners($0); // selecionamos el ul que es el que tienes
 chrome://inspect
 
 vamos al primer run vemos el tiempo, comentamos y continuamos
+
+---------- Docs
+
+https://developer.chrome.com/devtools
+https://umaar.com/dev-tips/
+https://www.youtube.com/channel/UCnUYZLuoy1rq1aVMwx4aTzw 
