@@ -83,10 +83,20 @@ queryObjects(Foo);
 - accesibility inspector (experimental)
 - layers (layers.html)
 - rendering, flashing (painting-flashing.html)
+  hacer zoom en main hasta encontrar un paint, en summary vemos que esta repitando todo el documento
+
+   transform: translateZ(0); promociona a su propio layer
+
+  vamos a painting-gpu y vemos como ahora main está vacio, 
+  vemos también que painting flashing no hace nada
+
+  fijarnos en la barra de fps 
+
 - rendering, fps metter
 - sensors
 - coverage 
 - quick source / si inspeccionas css te sale abajo el archivo con la linea
+- remote devices, abrimos chrome en el movil en alguna url y le damos a inspect
 
 ---------- Performance
 
@@ -150,17 +160,12 @@ var listener = getEventListeners($0); // selecionamos el ul que es el que tienes
 
 - http://cabbi.bo/ performance grabamos, vamos al source js/global.js y vemos los ms
 
+---------- Node
 
+- node --inspect-brk node.js // en el chorme que tengamos abierto aparece un icono
 
-12. node --inspect entry.js // chrome://inspect
---inspect-brk 119
+--inspect no se pararia
 
-time y timeEnd (con el anterior una funciona que se ejecuta n veces y hay que cambiar un paremetro para que vaya más rapida y lo hacemos live)
+chrome://inspect
 
-15. dom complejo, un css que afecta a muchos nodos, elements affected, box-shadow¿?¿¿, box-sizing??¿
-
-33. localhost remote 80
-
-
-??
-115, 117
+vamos al primer run vemos el tiempo, comentamos y continuamos
