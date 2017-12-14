@@ -1,0 +1,1 @@
+copy("['uno', 'dos', 'tres', 'cuatro'].forEach((it) => console.log(it))");

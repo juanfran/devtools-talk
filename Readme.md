@@ -50,7 +50,7 @@ monitorEvents(window, 'click'); // creo que util para recordar la forma de un ob
 
 copy({hola: 2})
 
-- queryObjects
+- talk - queryObjects
 
 queryObjects(HTMLElement);
 
@@ -130,7 +130,7 @@ setTimeout(() => {
 await fetch('https://jsonplaceholder.typicode.com')
 `
 
-- talk - performance-getenties, ver todo los descargado (images.html)
+- talk - performance-getentries, ver todo los descargado (images.html)
 
 `performance.getEntriesByType('resource') // measure, paint...` 
 

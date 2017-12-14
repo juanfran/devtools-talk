@@ -1,0 +1,21 @@
+copy(`
+function perf_observer(list, observer) { 
+   console.log(list);
+} 
+var observer2 = new PerformanceObserver(perf_observer); 
+observer2.observe({entryTypes: ["measure", "resource"]});
+
+setTimeout(() => {
+    performance.mark('start');
+
+    var total = 0;
+    for (var i = 0; i < 10000000; i++) {
+        total++;
+    }
+
+    performance.mark('end');
+    performance.measure('Global', 'start', 'end');
+}, 2000);
+
+await fetch('https://jsonplaceholder.typicode.com')
+`)

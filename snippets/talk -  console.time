@@ -1,0 +1,12 @@
+console.time('for time');
+
+var sum = 0;
+for (var i = 0; i < 400000; i++) {
+    if (i % 2) {
+        sum += 1;
+    } else {
+        sum += 2;
+    }
+}
+
+console.timeEnd('for time');

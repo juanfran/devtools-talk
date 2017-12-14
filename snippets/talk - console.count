@@ -1,0 +1,7 @@
+function contador() {
+    console.count('hola');
+}
+
+contador();
+contador();
+contador();

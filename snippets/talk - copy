@@ -1,0 +1,1 @@
+ copy("copy({hola: 2})");

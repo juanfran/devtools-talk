@@ -1,1 +1,0 @@
-console.log('%cHello world', 'font-size:40px;color:red;');

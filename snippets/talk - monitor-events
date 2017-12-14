@@ -1,0 +1,3 @@
+copy(`
+monitorEvents(window, 'click'); // creo que util para recordar la forma de un object
+`)

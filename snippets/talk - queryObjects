@@ -9,4 +9,4 @@ var littlefoo2 = new Foo();
 littlefoo2.name = 'foo2';
 
 queryObjects(Foo);
-`);
+`)
